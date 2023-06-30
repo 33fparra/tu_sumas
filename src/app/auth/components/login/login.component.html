@@ -1,0 +1,52 @@
+
+
+    <section class="register-account"> 
+        
+        <div class="signform">   
+          
+        
+          <div class="right">
+              <div class="headit">
+                  <h2 class="section-tittle text-center" >Login</h2>
+              </div>
+              <div class="form">
+                <form class="login-form" id="login-form" [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)" > 
+                    <input class="form-control" type="text" placeholder="Email"  formControlName="email"/>
+                    <div *ngIf="email?.errors?.['required'] && email?.touched">
+                      <p [ngStyle]="{color: 'tomato'}">Este campo es obligatorio</p></div>
+                    <div *ngIf="email?.errors?.['email'] && email?.touched">
+                      <p [ngStyle]="{color: 'tomato'}">El formato de Email no es válido</p></div>
+
+                    <input class="form-control" type="password" placeholder="Contraseña"  formControlName="password" /> 
+                    
+                    <!-- <div *ngIf="password?.errors?.['required'] && password?.touched">
+                      <p [ngStyle]="{color: 'tomato'}">Este campo es obligatorio</p></div>
+                    <div *ngIf="password?.errors?.['pattern'] && password?.touched">
+                      <p [ngStyle]="{color: 'tomato'}">El formato no es válido</p></div>-->
+                    <input class="subbt" type="submit"  value="Aceptar" [disabled]="loginForm.invalid" style="border:none;"/>  
+                    <!-- loading debo activarlo en TS -->
+                    <!-- <div class="spinner-grow" style="width: 3rem; height: 3rem; color:#450b78" role="status">                           FIJARSE CONSULTAR POR EL SPINNER
+                      <span class="sr-only">Loading...</span>
+                    </div> -->
+                </form>
+                <div class="ultimo">
+                <div><input type="checkbox" id="remember" name="remember"><span style="color:#b6b6b6;font-size: 0.9em;">Recordarme</span></div>
+                <div><a href="#">Olvidaste tu constraseña?</a></div>            
+              </div>
+
+              </div>
+          </div>
+          <div class="left">
+              
+              <div class="bts">
+           
+                <a (click)="loginbyFacebook()" class="fblogin social"><span>Inicia con Facebook</span></a>
+                <a (click)="loginbyGoogle()" class="gplogin social"><span>Inicia con Google</span></a>  
+                           
+              </div>
+              <div style="text-align:center;"><a style="color:#878686 !important" routerLink="/auth/register">¿No tienes Cuenta?</a></div>
+            </div>  
+        </div>
+       
+        
+  </section>

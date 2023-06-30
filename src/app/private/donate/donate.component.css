@@ -1,0 +1,25 @@
+.sobrecaja{
+    display: flex;
+    margin: 10px;
+    padding: 7px;
+    border-color: #6610f2 2px !important;
+    border: 2px;
+    border-radius: 30px;
+    background-color: #f0e6ff;
+}
+.caja{
+    padding: 5px;
+}
+.form-check-input{
+    display: flex;
+}
+.sobrecajaF{
+    background-color: #f0e6ff;
+    border-radius: 30px;
+    height: 120px;
+    width: 400px;
+}
+.row{
+    display: flex;
+    
+}

@@ -1,0 +1,40 @@
+/* este es el css que controla el popup del boton inicial */
+.video-container{
+    position:fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background-color: #3502579c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+  }
+  .video-container .close{
+    position: absolute;
+    top: 15%;
+    right: 35px;
+    font-size: 40px;
+    cursor: pointer;
+  }
+  .video-container iframe{
+    width: 850%;
+    max-width: 700px;
+    transform: scale(0);
+    box-shadow: 0 20px 20px black;
+    outline: none;
+    transition: all 0.3s;
+  }
+  .video-container.show{
+    pointer-events: all;
+    opacity: 1;
+  }
+  .video-container.show iframe{
+    transform:scale(1);
+  }
+  
+  
+  
